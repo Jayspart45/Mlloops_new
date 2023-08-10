@@ -50435,27 +50435,34 @@
       };
       (xu.title = "Instructions"), (xu.path = "/instruction");
 
-      const Mp = () => {
-        const { project: e, fetchProject: t } = (0, L.useContext)(Pc),
-          n = (0, L.useCallback)(() => {
-            e.id && t(e.id, !0);
-          }, [e]);
-        return (0, yi.jsx)("div", {
-          style: {
-            width: 480,
-          },
-          children: (0, yi.jsxs)(Ys, {
-            action: "updateProject",
-            formData: {
-              ...e,
-            },
-            params: {
-              pk: e.id,
-            },
-            onSubmit: n,
-            children: [],
+      const Mp = () => { 
+          const { project: e, fetchProject: t } = (0, L.useContext)(Pc),
+      n = (0, L.useCallback)(() => {
+        e.id && t(e.id, !0);
+      }, [e]);
+    return (0, yi.jsx)("div", {
+      style: {
+        width: "100%",
+      },
+      children: (0, yi.jsxs)(Ys, {
+        action: "updateProject",
+        formData: {
+          ...e,
+        },
+        params: {
+          pk: e.id,
+        },
+        onSubmit: n,
+        children: [
+          (0, yi.jsx)("iframe", {
+            src: e.description2,
+            width: "100%",
+            height: "900",
           }),
-        });
+        ],
+      }),
+    });
+       
       };
       (Mp.menuItem = "ML Monitor"), (Mp.path = "/instruction"), (Mp.exact = !0);
 
@@ -52880,6 +52887,7 @@
                         path: e.path,
                       }),
                       a = Z(e.path, o.params);
+                      // e.title="<h1>hello</h1>"
                     return {
                       path: a,
                       title: e.title instanceof Function ? e.title() : e.title,

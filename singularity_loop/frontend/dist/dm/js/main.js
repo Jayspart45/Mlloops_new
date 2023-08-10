@@ -15480,16 +15480,16 @@
           function ZA(e, t) {
             return hn.createElement(
               "svg",
-              UA(
-                {
-                  width: 20,
-                  height: 20,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+              // UA(
+              //   {
+              //     width: 20,
+              //     height: 20,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
               NA,
               HA,
               JA,
@@ -15569,16 +15569,16 @@
           function nc(e, t) {
             return hn.createElement(
               "svg",
-              _A(
-                {
-                  width: 20,
-                  height: 20,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+              // _A(
+              //   {
+              //     width: 20,
+              //     height: 20,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
               $A,
               ec,
               tc
@@ -15679,16 +15679,16 @@
           function fc(e, t) {
             return hn.createElement(
               "svg",
-              dc(
-                {
-                  width: 20,
-                  height: 20,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+              // dc(
+              //   {
+              //     width: 20,
+              //     height: 20,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
               pc,
               gc
             );
@@ -15933,16 +15933,16 @@
           function Hc(e, t) {
             return hn.createElement(
               "svg",
-              Uc(
-                {
-                  width: 24,
-                  height: 24,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+              // Uc(
+              //   {
+              //     width: 24,
+              //     height: 24,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
               Nc
             );
           }
@@ -20224,8 +20224,8 @@
                     i
                   )
                 : (0, Ri.jsx)(eg, {
-                    task: t,
-                    annotation: t.annotations[0],
+                    // task: t,
+                    // annotation: t.annotations[0],
                     config: Fr(t).SDK,
                     name: r,
                     variant: "120x120",
@@ -20698,6 +20698,7 @@
               }) => {
                 var u, A, c, d, p;
                 const { Header: g, Cell: f, id: h, ...w } = e;
+                console.log(w)
                 if (g instanceof Function) {
                   const { cellClassName: e, headerClassName: t, ...n } = w;
                   return (0, hn.createElement)(
@@ -24163,8 +24164,8 @@
                 .preProcessSnapshot((e) => {
                   var t;
                   const {
-                    total_annotations: n,
-                    total_predictions: r,
+                    // total_annotations: n,
+                    // total_predictions: r,
                     ...o
                   } = e;
                   return {
@@ -24173,8 +24174,8 @@
                       ? t
                       : []
                     ).map((e) => ({ id: e, annotated: !1, review: null })),
-                    totalAnnotations: n,
-                    totalPredictions: r,
+                    // totalAnnotations: n,
+                    // totalPredictions: r,
                   };
                 });
             };

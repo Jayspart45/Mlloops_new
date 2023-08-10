@@ -14,54 +14,48 @@ export const MLmonitorsettings = () => {
 
 
   return (
-    <div style={{width: 480}}>
-      <Form
-        action="updateProject"
-        formData={{...project}}
-        params={{pk: project.id}}
-        onSubmit={updateProject}
-      >
-        <Form.Row columnCount={1} rowGap="32px">
-          <Input
-            name="title"
-            label="Project Name"
-            labelProps={{large: true}}
-          />
+    <div style={{ width: 480 }}>
+    <Form
+      action="updateProject"
+      formData={{ ...project }}
+      params={{ pk: project.id }}
+      onSubmit={updateProject}
+    >
+      <Form.Row columnCount={1} rowGap="32px">
+        <Input name="title" label="Project Name" labelProps={{ large: true }} />
 
-          <TextArea
-            name="description"
-            label="URL"
-            labelProps={{large: true}}
-          />
+        <TextArea name="url" label="URL" labelProps={{ large: true }} />
 
-          <RadioGroup name="color" label="Color" size="large" labelProps={{size: "large"}}>
-            {colors.map(color => (
-              <RadioGroup.Button key={color} value={color}>
-                <Block name="color" style={{'--background': color}}/>
-              </RadioGroup.Button>
-            ))}
-          </RadioGroup>
+        <RadioGroup name="color" label="Color" size="large" labelProps={{ size: 'large' }}>
+          {colors.map((color) => (
+            <RadioGroup.Button key={color} value={color}>
+              <Block name="color" style={{ '--background': color }} />
+            </RadioGroup.Button>
+          ))}
+        </RadioGroup>
 
-          <RadioGroup label="Task Sampling" labelProps={{size: "large"}} name="sampling" simple>
-            {samplings.map(({value, label, description}) => (
-              <RadioGroup.Button
-                key={value}
-                value={`${value} sampling`}
-                label={`${label} sampling`}
-                description={description}
-              />
-            ))}
-          </RadioGroup>
-        </Form.Row>
+        <RadioGroup label="Task Sampling" labelProps={{ size: 'large' }} name="sampling" simple>
+          {samplings.map(({ value, label, description }) => (
+            <RadioGroup.Button
+              key={value}
+              value={`${value} sampling`}
+              label={`${label} sampling`}
+              description={description}
+            />
+          ))}
+        </RadioGroup>
+      </Form.Row>
 
-        <Form.Actions>
-          <Form.Indicator>
-            <span case="success">Saved!</span>
-          </Form.Indicator>
-          <Button type="submit" look="primary" style={{width: 120}}>Save</Button>
-        </Form.Actions>
-      </Form>
-    </div>
+      <Form.Actions>
+        <Form.Indicator>
+          <span case="success">Saved!</span>
+        </Form.Indicator>
+        <Button type="submit" look="primary" style={{ width: 120 }}>
+          Save
+        </Button>
+      </Form.Actions>
+    </Form>
+  </div>
   );
 };
 MLmonitorsettings.title = "ML Monitor";
