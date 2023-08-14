@@ -20697,10 +20697,11 @@
                 onReset: l,
               }) => {
                 var u, A, c, d, p;
-                const { Header: g, Cell: f, id: h, ...w } = e;
-                console.log(w)
+                const { Header: g, Cell: f, id: h,...w } = e;
+                
                 if (g instanceof Function) {
                   const { cellClassName: e, headerClassName: t, ...n } = w;
+                  console.log(g)
                   return (0, hn.createElement)(
                     Yp,
                     { ...n, name: "cell", key: h, mix: ["th", t] },
@@ -24157,6 +24158,7 @@
                   },
                   postProcessData(t) {
                     const { total_annotations: n, total_predictions: r } = t;
+                  //  console.log(t);
                     null !== n && (e.totalAnnotations = n),
                       null !== r && (e.totalPredictions = r);
                   },

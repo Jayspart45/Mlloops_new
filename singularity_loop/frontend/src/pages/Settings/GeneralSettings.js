@@ -47,15 +47,11 @@ export const GeneralSettings = () => {
 
           
           <TextArea
-            name="description1"
-            label="URL1"
+            name="description"
+            label="URL"
             labelProps={{large: true}}
           />
-           <TextArea
-            name="description2"
-            label="URL2"
-            labelProps={{large: true}}
-          />
+          
      
 
           <RadioGroup name="color" label="Color" size="large" labelProps={{size: "large"}}>

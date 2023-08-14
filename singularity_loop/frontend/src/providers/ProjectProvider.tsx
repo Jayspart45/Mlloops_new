@@ -76,7 +76,7 @@ export const ProjectProvider: React.FunctionComponent = ({children}) => {
   useEffect(() => {
     return () => projectCache.clear();
   }, []);
-
+console.log(projectData)
   return (
     <ProjectContext.Provider value={{
       project: projectData,

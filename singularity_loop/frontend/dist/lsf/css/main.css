@@ -192,7 +192,7 @@
    touch-action: manipulation;
  }
  a{
-   color: #b03f3f;
+   color: #e57171;
  }
  table {
    border-collapse: collapse;
@@ -305,11 +305,11 @@
    padding: 0.2em;
  }
  ::-moz-selection {
-   background: #b03f3f;
+   background: #e57171;
    color: #fff;
  }
  ::selection {
-   background: #b03f3f;
+   background: #e57171;
    color: #fff;
  }
  .clearfix:after,
@@ -16001,7 +16001,7 @@
  .ant-checkbox-input:focus + .ant-checkbox-inner,
  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
  .ant-checkbox:hover .ant-checkbox-inner {
-   border-color: #b03f3f;
+   border-color: #e57171;
  }
  .ant-checkbox-checked:after {
    -webkit-animation: antCheckboxEffect 0.36s ease-in-out;
@@ -16075,8 +16075,8 @@
    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
  }
  .ant-checkbox-checked .ant-checkbox-inner {
-   background-color: #b03f3f;
-   border-color: #b03f3f;
+   background-color: #e57171;
+   border-color: #e57171;
  }
  .ant-checkbox-disabled {
    cursor: not-allowed;

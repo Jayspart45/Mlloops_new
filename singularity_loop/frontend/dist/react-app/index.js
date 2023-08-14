@@ -42274,6 +42274,8 @@
           return (
             (0, L.useEffect)(() => {
               t.length ? i(t) : e.breadcrumbs && i(e.breadcrumbs);
+              console.log(t)               
+              
             }, [t, e]),
             (0, yi.jsx)(Lo, {
               name: "breadcrumbs",
@@ -42281,6 +42283,7 @@
                 tag: "ul",
                 name: "list",
                 children: r.map((e, t, r) => {
+                  if(t>=1) return //code added to remove New project #{id}
                   var i;
                   const o = t === r.length - 1,
                     a = `item-${t}-${e.title}`,
@@ -48363,6 +48366,7 @@
           const [t, n] = L.useState(!1),
             [r, i] = L.useState([]),
             [o, a] = L.useState([]),
+            [o1, a1] = L.useState([]),
             [s, l] = L.useState(),
             u = "choose" === s,
             c = ro();
@@ -48403,6 +48407,8 @@
           error: i,
           description: o,
           setDescription: a,
+          // description2: o,
+          // setDescription2: a,
           show: s = !0,
         }) =>
           s
@@ -48438,28 +48444,29 @@
                     children: [
                       (0, yi.jsx)("label", {
                         htmlFor: "project_description",
-                        children: "URL1",
+                        children: "URL",
                       }),
                       (0, yi.jsx)("input", {
-                        name: "url1",
-                        id: "url1",
+                        name: "url",
+                        id: "url",
                         placeholder: "Mention the URL here",
                         rows: "4",
                         value: o,
                         onChange: (e) => a(e.target.value),
                       }),
-                      (0, yi.jsx)("label", {
-                        htmlFor: "project_description",
-                        children: "URL2",
-                      }),
-                      (0, yi.jsx)("input", {
-                        name: "url2",
-                        id: "url2",
-                        placeholder: "Mention the URL here",
-                        rows: "4",
-                        value: o,
-                        onChange: (e) => a(e.target.value),
-                      }),
+                      // (0, yi.jsx)("label", {
+                      //   htmlFor: "project_description",
+                      //   children: "URL2",
+                      // }),
+                      // (0, yi.jsx)("input", {
+                        
+                      //   name: "url2",
+                      //   id: "url2",
+                      //   placeholder: "Mention the URL here",
+                      //   rows: "4",
+                      //   value: o,
+                      //   onChange: (e) => a(e.target.value),
+                      // }),
                     ],
                   }),
                 ],
@@ -48536,6 +48543,7 @@
                 title: l,
                 description: f,
                 label_config: h,
+               
               }),
               [l, f, h]
             ),
@@ -48628,6 +48636,7 @@
                   onSubmit: C,
                   description: f,
                   setDescription: p,
+                  
                   show: "name" === t,
                 }),
                 (0, yi.jsx)(Nl, {
@@ -50351,18 +50360,18 @@
                   }),
                   (0, yi.jsx)(Us, {
                     name: "description",
-                    label: "URL1",
+                    label: "URL",
                     labelProps: {
                       large: !0,
                     },
                   }),
-                  (0, yi.jsx)(Us, {
-                    name: "description2",
-                    label: "URL2",
-                    labelProps: {
-                      large: !0,
-                    },
-                  }),
+                  // (0, yi.jsx)(Us, {
+                  //   name: "description2",
+                  //   label: "URL2",
+                  //   labelProps: {
+                  //     large: !0,
+                  //   },
+                  // }),
                 ],
               }),
               (0, yi.jsxs)(Ys.Actions, {
@@ -50440,6 +50449,7 @@
       n = (0, L.useCallback)(() => {
         e.id && t(e.id, !0);
       }, [e]);
+      let source = e.description?e.description.split(",")[1]:""
     return (0, yi.jsx)("div", {
       style: {
         width: "100%",
@@ -50455,7 +50465,7 @@
         onSubmit: n,
         children: [
           (0, yi.jsx)("iframe", {
-            src: e.description2,
+            src: source,
             width: "100%",
             height: "900",
           }),
@@ -50464,7 +50474,7 @@
     });
        
       };
-      (Mp.menuItem = "ML Monitor"), (Mp.path = "/instruction"), (Mp.exact = !0);
+      (Mp.menuItem = "ML Monitor"), (Mp.path = "/ml-monitor"), (Mp.exact = !0);
 
       const MC = () => {
         const { project: e, fetchProject: t } = (0, L.useContext)(Pc),
@@ -50498,6 +50508,8 @@
           n = (0, L.useCallback)(() => {
             e.id && t(e.id, !0);
           }, [e]);
+      let source = e.description?e.description.split(",")[0]:""
+
         return (0, yi.jsx)("div", {
           style: {
             width: "100%",
@@ -50513,7 +50525,7 @@
             onSubmit: n,
             children: [
               (0, yi.jsx)("iframe", {
-                src: e.description,
+                src: source,
                 width: "100%",
                 height: "900",
               }),
@@ -51971,7 +51983,7 @@
             })
           );
         };
-      (Xu.title = "Projects"),
+        (Xu.title = "\u{1F3E0}"),
         (Xu.path = "/projects"),
         (Xu.exact = !0),
         (Xu.routes = ({ store: e }) => [

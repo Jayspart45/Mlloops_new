@@ -69,3 +69,6 @@ deploy/pgsql/certs/*
 1/*
 */*/1/*
 singularity_loop/tavern-output.json
+
+frontend/node_modules/puppeteer/.local-chromium/win64-856583/chrome-win/chrome.dll
+frontend/node_modules/puppeteer/.local-chromium/win64-856583/chrome-win/interactive_ui_tests.exe

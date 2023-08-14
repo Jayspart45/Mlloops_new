@@ -59,4 +59,4 @@ export const MLmonitorsettings = () => {
   );
 };
 MLmonitorsettings.title = "ML Monitor";
-MLmonitorsettings.path = "/mlmonitor";
+MLmonitorsettings.path = "/ml-monitor";
