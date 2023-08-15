@@ -3360,7 +3360,7 @@ input.dm-form-input[type="range"] {
   flex: 150 0 auto;
   max-width: min-content;
   min-width: min-content;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 10px;
   position: relative;
   width: fit-content;
@@ -3381,6 +3381,7 @@ display:none;
   display: flex;
   flex: 0;
   white-space: nowrap;
+  color: #333!important;
 }
 
 .dm-table__cell-content_disabled {

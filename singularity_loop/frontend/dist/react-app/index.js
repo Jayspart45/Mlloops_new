@@ -49280,6 +49280,7 @@
                     })
                   );
                 }),
+                
 
                 // import and export buttons
                 h.on("importClicked", () => {
@@ -50361,6 +50362,7 @@
                   (0, yi.jsx)(Us, {
                     name: "description",
                     label: "URL",
+                    placeholder:"[ML Modifier URL1 ,ML Monitor URL2] ",
                     labelProps: {
                       large: !0,
                     },
@@ -50974,6 +50976,7 @@
                               name: "url",
                               label: "URL",
                               required: !0,
+
                             }),
                           ],
                         }),
@@ -50981,6 +50984,7 @@
                           columnCount: 1,
                           children: (0, yi.jsx)(Us, {
                             name: "description",
+
                             label: "Description",
                             style: {
                               minHeight: 120,
@@ -51983,7 +51987,7 @@
             })
           );
         };
-        (Xu.title = "\u{1F3E0}"),
+        (Xu.title = "\u{2617}"),
         (Xu.path = "/projects"),
         (Xu.exact = !0),
         (Xu.routes = ({ store: e }) => [
