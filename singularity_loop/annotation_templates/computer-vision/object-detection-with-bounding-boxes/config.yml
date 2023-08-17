@@ -1,0 +1,15 @@
+title: Vision Detection
+type: community
+group: Vision Analytics
+order: 2
+image: /static/templates/Vision-detection.jpg
+details: <h1>Draw a bounding box around the object</h1>
+config: |
+  <View>
+    <Image name="image" value="$image"/>
+    <RectangleLabels name="label" toName="image">
+      <Label value="Cat" background="#62a5d0"/>
+      <Label value="Dog" background="#e3df70"/>
+      <Label value="Floor" background="#e0645c"/>
+    </RectangleLabels>
+  </View>

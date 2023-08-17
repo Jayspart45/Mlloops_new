@@ -1,0 +1,22 @@
+title: Vision Segmentation
+type: community
+group: Vision Analytics
+order: 3
+image: /static/templates/Vision-segmentation.jpg
+details: <h1>Draw a polygon around object</h1>
+config: |
+  <View>
+
+    <Header value="Select label and click the image to start"/>
+    <Image name="image" value="$image" zoom="true"/>
+
+    <PolygonLabels name="label" toName="image"
+                   strokeWidth="3" pointSize="small"
+                   opacity="0.9">
+      <Label value="Cat" background="#62a5d0"/>
+      <Label value="Dog" background="#e3df70"/>
+      <Label value="Floor" background="#e0645c"/>
+      <Label value="Text" background="#72e684"/>
+    </PolygonLabels>
+
+  </View>

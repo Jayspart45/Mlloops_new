@@ -1,0 +1,18 @@
+{% extends 'simple.html' %} {% load i18n %} {% load static %} {% load filters %}
+{% block head %}
+<link
+  rel="stylesheet"
+  href="{{ settings.HOSTNAME }}{% static 'css/login.css' %}"
+/>
+
+{% endblock %} {% block content %}
+<div class="login_page">
+  <div class="container">
+    <a href="{% url 'user-login' %}{% if next %}?{{next}}{% endif %}"><h1> MLloOps </h1></a>
+    A Human-Machine Loop for Accelerating Data-Driven Machine Learning
+    Workflows.
+  </div>
+  {% block user_content %} {% endblock %}
+</div>
+
+{% endblock %}

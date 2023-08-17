@@ -1,0 +1,15 @@
+title: Vision Classification
+type: community
+group: Vision Analytics
+order: 1
+image: /static/templates/Vision-classification.jpg
+details: <h1>Classify the image</h1>
+config: |
+  <View>
+    <Image name="image" value="$image"/>
+    <Choices name="choice" toName="image">
+      <Choice value="Dog"/>
+      <Choice value="Cat" />
+    </Choices>
+  </View>
+

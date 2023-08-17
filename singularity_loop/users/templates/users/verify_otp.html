@@ -1,0 +1,32 @@
+{% extends 'users/user_base.html' %}
+{% block user_content %}
+
+<form id="otp-form" action="{% url 'verify_otp' %}?{% if login %}&login={{ login }}{% endif %}{% if email %}&email={{ email }}{% endif %}" method="post">
+  {% csrf_token %}
+
+  <div class="otp-container">
+    <h2 class="display-4">Security Code</h2>
+    <input type="text" class="ls-input" name="otp" id="otp" placeholder="Security Code" />
+
+    {% if form.errors.otp %}
+    <ul class="field_errors">
+      {% for error in form.errors.otp %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <button type="submit" aria-label="submit" class="ls-button ls-button_look_primary">
+      Verify
+    </button>
+  </div>
+
+  <p>
+    {% if messages %}
+    {% for message in messages %}
+    <span class="error">{{ message }}</span>
+    {% endfor %}
+    {% endif %}
+  </p>
+</form>
+
+{% endblock %}

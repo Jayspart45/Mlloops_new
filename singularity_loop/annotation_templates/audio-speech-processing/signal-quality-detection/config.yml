@@ -1,0 +1,11 @@
+title: Voice Detection
+type: community
+group: Voice Analytics
+order: 4
+image: /static/templates/Voice-detection.jpg
+details: <h1>Rate signal quality</h1>
+config: |
+  <View>
+    <Rating name="rating" toName="audio" maxRating="10" icon="star" size="medium" />
+    <Audio name="audio" value="$audio"/>
+  </View>
