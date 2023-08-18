@@ -16082,7 +16082,8 @@
               // ordering: ({ size: e }) =>
               //   (0, Ri.jsx)(PA, { size: e, style: Xc }),
               // "grid-size": ({ size: e }) => (0, Ri.jsx)(OA, { size: e }),
-              // refresh: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
+              refresh: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
+              // setting: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
               // "loading-possum": () => (0, Ri.jsx)(LA, {}),
               // "label-button": ({ size: e }) => (0, Ri.jsx)(FA, { size: e }),
               // actions: ({ size: e }) => (0, Ri.jsx)(jA, { size: e, style: Xc }),
@@ -25510,6 +25511,7 @@
                     body: "Before you can annotate the data, set up labeling configuration",
                     onOk() {
                       e.SDK.invoke("settingsClicked");
+                      console.log(e)
                     },
                     okText: "Go to setup",
                   }),

@@ -50362,7 +50362,7 @@
                   (0, yi.jsx)(Us, {
                     name: "description",
                     label: "URL",
-                    placeholder:"[ML Modifier URL1 ,ML Monitor URL2] ",
+                    placeholder:"[ URL for ML Modifier,URL for ML Monitor ] ",
                     labelProps: {
                       large: !0,
                     },
