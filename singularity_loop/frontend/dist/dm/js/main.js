@@ -8823,7 +8823,8 @@
                     (e) => {
                       var t, n;
                       a &&
-                        (h(e.target) ||
+                        (h(e
+                          ) ||
                           null === (t = c.current) ||
                           void 0 === t ||
                           null === (n = t.close) ||
@@ -15872,9 +15873,6 @@
                 return e;
               }).apply(this, arguments);
           }
-
-          // refresh icon - settings icon
-
           var Kc = hn.createElement("path", {
             d: "M5.857 4.357L4 2.5l-1 6 6-1-1.705-1.705A4.976 4.976 0 0110 5V3c-1.55 0-2.983.504-4.143 1.357zM5.527 12.237A5 5 0 0010 15v2a7 7 0 01-6.262-3.869l1.789-.894zM14.143 15.643L16 17.5l1-6-6 1 1.706 1.706A4.976 4.976 0 0110 15v2c1.55 0 2.983-.504 4.143-1.357zM14.473 7.763A5 5 0 0010 5V3a7 7 0 016.262 3.869l-1.789.894z",
             fill: "currentColor",
@@ -15884,7 +15882,7 @@
               "svg",
               Tc(
                 {
-                  viewBox: "0 0 25 25",
+                  viewBox: "0 0 20 20",
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                   ref: t,
@@ -15894,7 +15892,6 @@
               Kc
             );
           }
-
           var Pc = hn.forwardRef(Lc);
           function Uc() {
             return (Uc =
@@ -15908,7 +15905,6 @@
                 return e;
               }).apply(this, arguments);
           }
-
           var Nc = hn.createElement(
             "g",
             { opacity: 0.23, stroke: "#000", strokeWidth: 2 },
@@ -15938,16 +15934,16 @@
           function Hc(e, t) {
             return hn.createElement(
               "svg",
-              // Uc(
-              //   {
-              //     width: 24,
-              //     height: 24,
-              //     fill: "none",
-              //     xmlns: "http://www.w3.org/2000/svg",
-              //     ref: t,
-              //   },
-              //   e
-              // ),
+              Uc(
+                {
+                  width: 24,
+                  height: 24,
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  ref: t,
+                },
+                e
+              ),
               Nc
             );
           }
@@ -15956,8 +15952,7 @@
             store: e,
             needsDataFetch: e.needsDataFetch,
             projectFetch: e.projectFetch,
-          }))
-          (
+          }))(
             ({
               store: e,
               needsDataFetch: t,
@@ -15987,7 +15982,6 @@
                 children: (0, Ri.jsx)(Pc, { style: { width: 20, height: 20 } }),
               })
           );
-          
           const zc = hn.createContext(),
             Wc = ({ size: e, value: t, onChange: n, children: r, ...o }) =>
               (0, Ri.jsx)(zc.Provider, {
@@ -16027,37 +16021,32 @@
             });
           };
           const Vc = yr(({ store: e }) => ({ view: e.currentView })),
-            // Zc = Vc(
-            //   gr(({ view: e, size: t, ...n }) =>
-            //     (0, Ri.jsxs)(Wc, {
-            //       size: t,
-            //       value: e.type,
-            //       onChange: (t) => e.setType(t.target.value),
-            //       ...n,
-
-            //     // list and grid buttons removed
-
-            //       children: [
-            //         (0, Ri.jsx)(Wc.Button, {
-            //           value: "list",
-            //           children: (0, Ri.jsx)(es, {
-            //             title: "List view",
-            //             children: (0, Ri.jsx)("span", { children: "List" }),
-            //           }),
-            //         }),
-            //         (0, Ri.jsx)(Wc.Button, {
-            //           value: "",
-            //           children: (0, Ri.jsx)(es, {
-            //             title: "Grid view",
-            //             children: (0, Ri.jsx)("span", { children: "Grid" }),
-            //           }),
-            //         }),
-            //       ],
-
-            //     })
-            //   )
-            // ),
-            
+            Zc = Vc(
+              gr(({ view: e, size: t, ...n }) =>
+                (0, Ri.jsxs)(Wc, {
+                //   size: t,
+                //   value: e.type,
+                //   onChange: (t) => e.setType(t.target.value),
+                //   ...n,
+                //   children: [
+                //     (0, Ri.jsx)(Wc.Button, {
+                //       value: "list",
+                //       children: (0, Ri.jsx)(es, {
+                //         title: "List view",
+                //         children: (0, Ri.jsx)("span", { children: "List" }),
+                //       }),
+                //     }),
+                //     (0, Ri.jsx)(Wc.Button, {
+                //       value: "",
+                //       children: (0, Ri.jsx)(es, {
+                //         title: "Grid view",
+                //         children: (0, Ri.jsx)("span", { children: "" }),
+                //       }),
+                //     }),
+                //   ],
+                })
+              )
+            ),
             Xc =
               (Vc(({ view: e, size: t, ...n }) =>
                 (0, Ri.jsxs)(Wc, {
@@ -16081,8 +16070,7 @@
               { minWidth: "110px", justifyContent: "space-between" }),
             _c = {
               "view-toggle": ({ size: e }) =>
-                (0, Ri.jsx)(Zc, { size: e, style: Xc }), 
-
+                (0, Ri.jsx)(Zc, { size: e, style: Xc }),
               // columns: ({ size: e }) =>
               //   (0, Ri.jsx)(_i, {
               //     wrapper: _i.Checkbox,
@@ -16096,6 +16084,7 @@
               //   (0, Ri.jsx)(PA, { size: e, style: Xc }),
               // "grid-size": ({ size: e }) => (0, Ri.jsx)(OA, { size: e }),
               refresh: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
+              // setting: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
               // "loading-possum": () => (0, Ri.jsx)(LA, {}),
               // "label-button": ({ size: e }) => (0, Ri.jsx)(FA, { size: e }),
               // actions: ({ size: e }) => (0, Ri.jsx)(jA, { size: e, style: Xc }),
@@ -21811,12 +21800,10 @@
                 ),
                 Q = (0, hn.useMemo)(
                   () => [
-                    // completed_on added
                     v("total_annotations", 60, "center"),
                     v("cancelled_annotations", 60, "center"),
                     v("total_predictions", 60, "center"),
                     v("completed_at", 180, "space-between", !0),
-                    v("completed_on", 180, "space-between", !0),
                     v("reviews_accepted", 60, "center"),
                     v("reviews_rejected", 60, "center"),
                     v("ground_truth", 60, "center"),
@@ -23045,13 +23032,10 @@
                   ),
                   M = (0, hn.useMemo)(
                     () => [
-
-                      // completed_on added
                       b("total_annotations", 60, "center"),
                       b("cancelled_annotations", 60, "center"),
                       b("total_predictions", 60, "center"),
                       b("completed_at", 180, "space-between", !0),
-                      b("completed_on", 180, "space-between", !0),
                       b("reviews_accepted", 60, "center"),
                       b("reviews_rejected", 60, "center"),
                       b("ground_truth", 60, "center"),
@@ -24184,8 +24168,8 @@
                 .preProcessSnapshot((e) => {
                   var t;
                   const {
-                    // total_annotations: n,
-                    // total_predictions: r,
+                    total_annotations: n,
+                    total_predictions: r,
                     ...o
                   } = e;
                   return {
@@ -25528,6 +25512,7 @@
                     body: "Before you can annotate the data, set up labeling configuration",
                     onOk() {
                       e.SDK.invoke("settingsClicked");
+                      console.log(e)
                     },
                     okText: "Go to setup",
                   }),
@@ -26480,8 +26465,7 @@
                 (this.toolbar =
                   null !== (l = e.toolbar) && void 0 !== l
                     ? l
-                    // refresh
-                    : "actions columns filters ordering label-button loading-possum error-box | refresh import-button export-button"),
+                    : "actions columns filters ordering label-button loading-possum error-box | refresh import-button export-button view-toggle"),
                 (this.panels = e.panels),
                 (this.spinner = e.spinner),
                 (this.spinnerSize = e.spinnerSize),

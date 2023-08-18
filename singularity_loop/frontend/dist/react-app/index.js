@@ -50165,19 +50165,19 @@
                                   title: "Action confirmation",
                                   body: (0, yi.jsx)("p", {
                                     children: [
-                                      "You're about to delete all things. This action cannot be undone. Please type the project name to confirm",
-                                      (0, yi.jsxs)(Ys.Row, {
-                                        columnCount: 1,
-                                        rowGap: "32px",
-                                        children: [
-                                          (0, yi.jsx)(Us, {
-                                            name: "title",
-                                            labelProps: {
-                                              large: !0,
-                                            },
-                                          }),
-                                        ],
-                                      }),
+                                      "Are you sure You want to delete the project?",
+                                    //   (0, yi.jsxs)(Ys.Row, {
+                                    //     columnCount: 1,
+                                    //     rowGap: "32px",
+                                    //     children: [
+                                    //       (0, yi.jsx)(Us, {
+                                    //         name: "title",
+                                    //         labelProps: {
+                                    //           large: !0,
+                                    //         },
+                                    //       }),
+                                    //     ],
+                                    //   }),
                                     ],
                                   }),
                                   okText: "Delete",
@@ -52002,7 +52002,7 @@
             })
           );
         };
-        (Xu.title = "\u{1F3E0}"),
+        (Xu.title = "\u{2617}"),
         (Xu.path = "/projects"),
         (Xu.exact = !0),
         (Xu.routes = ({ store: e }) => [

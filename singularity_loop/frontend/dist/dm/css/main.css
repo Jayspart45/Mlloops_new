@@ -3380,6 +3380,7 @@ display:none;
   align-items: center;
   display: flex;
   flex: 0;
+  color: #333;
   white-space: nowrap;
 }
 
